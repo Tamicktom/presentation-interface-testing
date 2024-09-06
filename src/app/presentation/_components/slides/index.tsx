@@ -5,7 +5,6 @@ import Reveal from 'reveal.js';
 
 //* Styles imports
 import 'reveal.js/dist/reveal.css';
-// import 'reveal.js/dist/theme/black.css';
 
 //* Components imports
 import { Capa } from "./capa";
@@ -44,11 +43,7 @@ export function Slides() {
     // our parent element. Make sure the parent is not 0-height.
     <div className="reveal bg-background" ref={deckDivRef}>
       <div className="slides">
-        <section>
-          <Capa />
-          <section>Slide 1-3</section>
-        </section>
-        <section>Slide 2</section>
+        <Capa />
       </div>
     </div>
   );
