@@ -8,6 +8,11 @@ import 'reveal.js/dist/reveal.css';
 
 //* Components imports
 import { Capa } from "./capa";
+import { Introducao } from "./introducao";
+import { TiposDeTestesDeUI } from "./tipos-de-testes-de-ui";
+import { Desafios } from "./desafios";
+import { Frameworks } from "./frameworks";
+import { Estrategias } from "./estrategias";
 
 export function Slides() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -20,6 +25,7 @@ export function Slides() {
     deckRef.current = new Reveal(deckDivRef.current, {
       transition: "slide",
       // other config options
+      disableLayout: true
     });
 
     deckRef.current.initialize().then(() => {
@@ -44,6 +50,11 @@ export function Slides() {
     <div className="reveal bg-background" ref={deckDivRef}>
       <div className="slides">
         <Capa />
+        <Introducao />
+        <TiposDeTestesDeUI />
+        <Desafios />
+        <Frameworks />
+        <Estrategias />
       </div>
     </div>
   );
