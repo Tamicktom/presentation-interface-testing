@@ -11,8 +11,9 @@ import { Capa } from "./capa";
 import { Introducao } from "./introducao";
 import { TiposDeTestesDeUI } from "./tipos-de-testes-de-ui";
 import { Desafios } from "./desafios";
-import { Frameworks } from "./frameworks";
 import { Estrategias } from "./estrategias";
+import { BoasPraticas } from "./boas-praticas";
+import { Frameworks } from "./frameworks";
 
 export function Slides() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -53,8 +54,9 @@ export function Slides() {
         <Introducao />
         <TiposDeTestesDeUI />
         <Desafios />
-        <Frameworks />
         <Estrategias />
+        <BoasPraticas />
+        <Frameworks />
       </div>
     </div>
   );
