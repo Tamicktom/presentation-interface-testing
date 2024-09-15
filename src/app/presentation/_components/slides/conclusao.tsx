@@ -2,7 +2,7 @@
 
 //* Components imports
 
-export function BoasPraticas() {
+export function Conclusao() {
   return (
     <section>
       <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
