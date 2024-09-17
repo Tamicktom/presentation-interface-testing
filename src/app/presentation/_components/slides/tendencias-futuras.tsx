@@ -15,7 +15,6 @@ export function TendenciasFuturas() {
             <li>Inteligência artificial</li>
             <li>Testes de Voz e Interfaces Naturais</li>
             <li>Realidade Aumentada e Virtual</li>
-            <li>Colaboração entre equipes</li>
           </ul>
         </div>
       </div>

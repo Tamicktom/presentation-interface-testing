@@ -16,6 +16,9 @@ export function TiposDeTestesDeUI() {
             <li>Design</li>
             <li>Usabilidade</li>
             <li>Performance</li>
+            <li>Responsividade</li>
+            <li>Aceitação do usuário (UAT)</li>
+            <li>Exploratórios</li>
           </ul>
         </div>
       </div>
