@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { ViewTransitions } from 'next-view-transitions'
 import "./globals.css";
 
+import { Toaster } from "@/components/ui/sonner";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -31,6 +33,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           {children}
+          <Toaster richColors position="bottom-center" />
         </body>
       </html>
     </ViewTransitions>
