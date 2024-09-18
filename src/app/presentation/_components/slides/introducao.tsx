@@ -4,8 +4,9 @@ import { toast } from "sonner";
 //* Components imports
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Wrapper } from "@/components/wrapper";
 
 
 export function Introducao() {
@@ -60,13 +61,17 @@ export function Introducao() {
               central da interação com o sistema.
             </p>
           </div>
-          <div>
+          <div className="flex flex-col w-full max-w-64 gap-4">
             <Button
               className="w-full active:scale-95 transition-all"
               onPointerDown={handleClick}
             >
               Clica em mim :3
             </Button>
+            <div className="w-full flex flex-col items-start justify-start gap-1">
+              <Label htmlFor="name-input">Nome</Label>
+              <Input id="name-input" placeholder="Nome" />
+            </div>
           </div>
         </Wrapper>
       </section>
@@ -74,12 +79,3 @@ export function Introducao() {
   );
 }
 
-function Wrapper(props: { children: React.ReactNode }) {
-  return (
-    <section>
-      <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
-        {props.children}
-      </div>
-    </section>
-  );
-}

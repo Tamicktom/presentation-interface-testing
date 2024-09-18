@@ -17,6 +17,7 @@ import { Frameworks } from "./frameworks";
 import { ExemploPratico } from "./exemplo-pratico";
 import { TendenciasFuturas } from "./tendencias-futuras";
 import { Conclusao } from "./conclusao";
+import { BackgroundDots } from "@/components/background-dots";
 
 export function Slides() {
   const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
@@ -49,21 +50,22 @@ export function Slides() {
   }, []);
 
   return (
-    // Your presentation is sized based on the width and height of
-    // our parent element. Make sure the parent is not 0-height.
-    <div className="reveal bg-background" ref={deckDivRef}>
-      <div className="slides">
-        <Capa />
-        <Introducao />
-        <TiposDeTestesDeUI />
-        <Desafios />
-        <Estrategias />
-        <BoasPraticas />
-        <Frameworks />
-        <ExemploPratico />
-        <TendenciasFuturas />
-        <Conclusao />
+    <>
+      <div className="reveal bg-background" ref={deckDivRef}>
+        <div className="slides">
+          <Capa />
+          <Introducao />
+          <TiposDeTestesDeUI />
+          <Desafios />
+          <Estrategias />
+          <BoasPraticas />
+          <Frameworks />
+          <ExemploPratico />
+          <TendenciasFuturas />
+          <Conclusao />
+        </div>
       </div>
-    </div>
+      <BackgroundDots />
+    </>
   );
 }

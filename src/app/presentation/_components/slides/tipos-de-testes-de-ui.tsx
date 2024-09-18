@@ -1,6 +1,7 @@
 //* Libraries imports
 
 //* Components imports
+import { Video } from "@/components/video";
 
 export function TiposDeTestesDeUI() {
   return (
@@ -20,6 +21,15 @@ export function TiposDeTestesDeUI() {
             <li>Aceitação do usuário (UAT)</li>
             <li>Exploratórios</li>
           </ul>
+        </div>
+
+        <div
+          style={{
+            aspectRatio: '9 / 16'
+          }}
+          className="w-80"
+        >
+          <Video src="/video1.mp4" />
         </div>
       </div>
     </section>

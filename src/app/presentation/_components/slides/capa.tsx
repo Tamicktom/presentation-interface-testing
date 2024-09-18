@@ -2,6 +2,7 @@
 
 //* Components imports
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { BlurIn } from "@/components/text-animations/blurin";
 
 export function Capa() {
 
@@ -9,8 +10,8 @@ export function Capa() {
   const src = `https://github.com/${username}.png`;
 
   return (
-    <section>
-      <h1 className="text-5xl font-bold">Testes de interface</h1>
+    <section className="flex flex-col items-center justify-center relative h-full p-8">
+      <BlurIn>Testes de interface</BlurIn>
 
       <div className="flex justify-center items-center p-4 border border-border rounded-lg w-fit gap-4">
         <Avatar className="size-16">
