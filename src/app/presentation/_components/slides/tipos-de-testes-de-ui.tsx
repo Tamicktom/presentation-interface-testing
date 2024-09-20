@@ -20,17 +20,26 @@ export function TiposDeTestesDeUI() {
             <div className="w-full max-w-96 border-2 border-border p-4 bg-white rounded-lg">
               <ul className="list-disc list-inside text-xl text-start">
                 <li>Acessibilidade</li>
-                <li>Design</li>
                 <li>Usabilidade</li>
                 <li>Performance</li>
                 <li>Responsividade</li>
-                <li>Aceitação do usuário (UAT)</li>
-                <li>Exploratórios</li>
+                <li>Outros...</li>
               </ul>
             </div>
           </div>
         </div>
       </Wrapper>
+      <Acessibilidade />
+      <Usabilidade />
+      <Performance />
+      <Responsividade />
+    </section>
+  );
+}
+
+function Acessibilidade() {
+  return (
+    <>
       <Wrapper>
         <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
           <div className="flex flex-row items-center justify-center gap-4">
@@ -99,6 +108,24 @@ export function TiposDeTestesDeUI() {
           </div>
         </div>
       </Wrapper>
-    </section>
+    </>
+  );
+}
+
+function Usabilidade() {
+  return (
+    <></>
+  );
+}
+
+function Performance() {
+  return (
+    <></>
+  );
+}
+
+function Responsividade() {
+  return (
+    <></>
   );
 }
