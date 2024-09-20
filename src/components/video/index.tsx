@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   src: string;
+  type: "video/mp4" | "video/webm";
 };
 
 export function Video(props: Props) {
@@ -34,7 +35,7 @@ export function Video(props: Props) {
       disablePictureInPicture
       disableRemotePlayback
     >
-      <source src={props.src} type="video/mp4" />
+      <source src={props.src} type={props.type} />
       <track kind="captions" />
     </video>
   );

@@ -30,7 +30,7 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="pt-BR">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background`}
         >
           {children}
           <Toaster richColors position="bottom-center" />
