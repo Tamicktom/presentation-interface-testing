@@ -1,4 +1,5 @@
 //* Libraries imports
+import Image from "next/image";
 
 //* Components imports
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -11,9 +12,19 @@ export function Capa() {
 
   return (
     <section className="flex flex-col items-center justify-center relative h-full p-8">
-      <BlurIn>Testes de interface</BlurIn>
+      <div className="flex flex-col justify-center items-center gap-32 pt-12">
+        <BlurIn>Testes de interface</BlurIn>
 
-      <div className="flex justify-center items-center p-4 border border-border rounded-lg w-fit gap-4">
+        <Image
+          src="/interface-testing.gif"
+          alt="interface testing"
+          width={1280}
+          height={1280}
+          className="w-96 rounded-lg"
+        />
+      </div>
+
+      <div className="flex justify-center items-center p-4 border border-border rounded-lg w-fit gap-4 absolute bottom-20 left-1/2 -translate-x-1/2 bg-white">
         <Avatar className="size-16">
           <AvatarImage src={src} />
           <AvatarFallback className="uppercase">

@@ -5,12 +5,12 @@
 export function BoasPraticas() {
   return (
     <section>
-      <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
+      <div className="h-full w-full min-h-svh flex flex-col justify-center items-center gap-8">
         <h2 className="text-5xl font-bold">
           Boas práticas
         </h2>
 
-        <div className="pt-12 w-full max-w-96">
+        <div className="w-full max-w-md rounded-lg border-2 border-border p-4 bg-white">
           <ul className="list-disc list-inside text-xl text-start">
             <li>Escrita clara e concisa</li>
             <li>Isolamento de testes</li>

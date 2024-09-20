@@ -17,6 +17,7 @@ import { Frameworks } from "./frameworks";
 import { ExemploPratico } from "./exemplo-pratico";
 import { TendenciasFuturas } from "./tendencias-futuras";
 import { Conclusao } from "./conclusao";
+import { Artigo } from "./artigo";
 import { BackgroundDots } from "@/components/background-dots";
 
 export function Slides() {
@@ -59,10 +60,11 @@ export function Slides() {
           <Desafios />
           <Estrategias />
           <BoasPraticas />
-          <Frameworks />
-          <ExemploPratico />
+          {/* <Frameworks /> */}
+          {/* <ExemploPratico /> */}
           <TendenciasFuturas />
           <Conclusao />
+          <Artigo />
         </div>
       </div>
       <BackgroundDots />
