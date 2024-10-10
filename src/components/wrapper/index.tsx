@@ -1,6 +1,6 @@
+"use client";
 //* Libraries imports
 import type { ReactNode } from "react";
-
 
 type Props = {
   children: ReactNode;

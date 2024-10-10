@@ -38,8 +38,8 @@ export function Estrategias() {
             </span>
           </div>
 
-          <div className="p-12 w-full grid grid-cols-2 gap-4">
-            <div className="col-span-1 rounded-lg border-2 border-border bg-white overflow-hidden p-4">
+          <div className="p-12 w-full grid grid-cols-4 gap-4">
+            <div className="col-span-1 col-start-2 rounded-lg border-2 border-border bg-white overflow-hidden p-4">
               <div className="w-full">
                 <span className="text-xl text-center">
                   Desktop
@@ -58,7 +58,7 @@ export function Estrategias() {
               </div>
             </div>
 
-            <div className="col-span-1 rounded-lg border-2 border-border bg-white overflow-hidden p-4">
+            <div className="col-span-1 col-start-3 rounded-lg border-2 border-border bg-white overflow-hidden p-4">
               <div className="w-full">
                 <span className="text-xl text-center">
                   Mobile

@@ -1,8 +1,13 @@
 //* Libraries imports
+import Image from "next/image";
+import { toast } from "sonner";
+import { SaveIcon } from "lucide-react";
+import { useState } from "react";
 
 //* Components imports
 import { Wrapper } from "@/components/wrapper";
 import { Video } from "@/components/video";
+import { Button } from "@/components/ui/button";
 
 export function TiposDeTestesDeUI() {
   return (
@@ -18,7 +23,7 @@ export function TiposDeTestesDeUI() {
         <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
           <div className="flex flex-row items-center justify-center gap-4">
             <div className="w-full max-w-96 border-2 border-border p-4 bg-white rounded-lg">
-              <ul className="list-disc list-inside text-xl text-start">
+              <ul className="list-disc list-inside text-2xl text-start">
                 <li>Acessibilidade</li>
                 <li>Usabilidade</li>
                 <li>Performance</li>
@@ -38,6 +43,11 @@ export function TiposDeTestesDeUI() {
 }
 
 function Acessibilidade() {
+
+  function handleSave() {
+    toast.success("Você salvou o arquivo!");
+  }
+
   return (
     <>
       <Wrapper>
@@ -66,6 +76,15 @@ function Acessibilidade() {
               </span>
             </div>
             <div className="flex flex-row items-center justify-center gap-4">
+              <div className="w-full rounded-lg overflow-hidden">
+                <Image
+                  src="/porta-acessivel.jpg"
+                  alt="porta acessivel"
+                  width={1280}
+                  height={1280}
+                  className="size-full object-cover"
+                />
+              </div>
               <div className="w-full gap-4">
                 <ul className="list-disc list-inside text-xl text-start">
                   <li>Inclusão</li>
@@ -103,6 +122,40 @@ function Acessibilidade() {
                   <li>Testes com usuários reais com deficiência</li>
                   <li>Check de conformidade com as diretrizes da WCAG</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
+      <Wrapper>
+        <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-4 border-2 border-border p-4 bg-white rounded-lg">
+            <div>
+              <h3 className="text-2xl font-bold">
+                Acessibilidade
+              </h3>
+              <span className="text-xl text-muted-foreground">
+                Contraste de cores
+              </span>
+            </div>
+            <div className="flex flex-row items-center justify-center gap-16 pt-4">
+              <div className="w-full">
+                <Button
+                  onPointerDown={handleSave}
+                  size="icon"
+                  className="p-4 size-auto"
+                >
+                  <SaveIcon className="size-12 text-blue-400" />
+                </Button>
+              </div>
+              <div className="w-full">
+                <Button
+                  onPointerDown={handleSave}
+                  size="icon"
+                  className="p-4 size-auto"
+                >
+                  <SaveIcon className="size-12 text-primary-foreground" />
+                </Button>
               </div>
             </div>
           </div>
@@ -239,6 +292,12 @@ function Usabilidade() {
 }
 
 function Performance() {
+  const [rows, setRows] = useState(0);
+
+  function handleAddRows() {
+    setRows((prevRows) => prevRows + 50);
+  }
+
   return (
     <>
       <Wrapper>
@@ -305,6 +364,80 @@ function Performance() {
           </div>
         </div>
       </Wrapper>
+      <Wrapper>
+        <div className="h-full w-full min-h-svh flex flex-col justify-center items-center">
+          <div className="flex flex-col items-center justify-center gap-4 border-2 border-border p-4 bg-white rounded-lg">
+            <div>
+              <h3 className="text-3xl font-bold">
+                Performance
+              </h3>
+              <span className="text-xl text-muted-foreground">
+                Ferramentas
+              </span>
+            </div>
+            <div className="flex flex-row items-center justify-center gap-4">
+              <div className="w-full gap-4 flex flex-col">
+                <div className="w-full justify-center items-center flex flex-col gap-4">
+                  <span className="text-foreground text-xl">
+                    {rows} linhas <br />
+                    {rows * 5} imagens
+                  </span>
+                  <div className="flex flex-row items-center justify-center gap-4">
+                    <Button
+                      onPointerDown={handleAddRows}
+                    >
+                      Adicionar 50 linhas
+                    </Button>
+                    <Button
+                      onPointerDown={() => setRows(0)}
+                      variant="destructive"
+                    >
+                      Reset
+                    </Button>
+                  </div>
+                </div>
+                <div className="h-[512px] max-h-[512px] overflow-y-scroll w-full min-w-[1080px] max-w-[1280px]">
+                  {
+                    Array.from({ length: rows }).map((_, index) => {
+                      const i = index + 1;
+                      return (
+                        <div key={i} className="flex flex-row items-center justify-center gap-4 p-4">
+                          <div className="w-full">
+                            <div className="flex flex-row items-center justify-center gap-4">
+                              <div className="w-full">
+                                <div className="flex flex-row items-center justify-center gap-4">
+                                  {
+                                    Array.from({ length: 5 }, (_, j) => {
+                                      const k = j + 1;
+                                      return (
+                                        <div key={k} className="w-full">
+                                          <div className="w-full rounded-lg overflow-hidden">
+                                            <Image
+                                              src={`https://picsum.photos/200/200?random=${i * 100 + j}`}
+                                              alt="porta acessivel"
+                                              width={1280}
+                                              height={1280}
+                                              className="size-full object-cover"
+                                            />
+                                          </div>
+                                        </div>
+                                      );
+                                    })
+                                  }
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Wrapper>
     </>
   );
 }
@@ -328,6 +461,16 @@ function Responsividade() {
             <span className="text-xl text-muted-foreground">
               Como funciona?
             </span>
+
+            <div className="w-full max-w-[512px] rounded-lg overflow-hidden">
+              <Image
+                src="/responsivity.webp"
+                alt="responsivity"
+                width={1280}
+                height={1280}
+                className="size-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </Wrapper>

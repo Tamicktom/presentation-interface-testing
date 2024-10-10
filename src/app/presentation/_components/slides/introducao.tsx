@@ -1,3 +1,4 @@
+"use client";
 //* Libraries imports
 import { toast } from "sonner";
 import Image from "next/image";
@@ -47,12 +48,12 @@ export function Introducao() {
         </Wrapper>
         <Wrapper>
           <div className="w-full">
-            <ul className="text-2xl text-start grid grid-cols-2 gap-8 p-12">
-              <li className="flex flex-col items-center gap-2 w-full col-span-1 rounded-lg border-2 border-border p-4 bg-white">
+            <div className="text-2xl text-start grid grid-cols-2 gap-8 p-12">
+              <div className="flex flex-col items-center gap-2 w-full col-span-1 rounded-lg border-2 border-border p-4 bg-white">
                 <Video src="/cli-video.webm" type="video/webm" />
                 <span>CLI (Command Line Interface)</span>
-              </li>
-              <li className="flex flex-col items-center gap-2 w-full col-span-1 rounded-lg border-2 border-border p-4 bg-white">
+              </div>
+              <div className="flex flex-col items-center gap-2 w-full col-span-1 rounded-lg border-2 border-border p-4 bg-white">
                 <Image
                   src="/tui.gif"
                   alt="tui"
@@ -61,8 +62,8 @@ export function Introducao() {
                   className="rounded-lg w-full"
                 />
                 <span>TUI (Text User Interface)</span>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </Wrapper>
         <Wrapper>
@@ -70,7 +71,7 @@ export function Introducao() {
             <ul className="text-2xl text-start flex flex-col list-disc list-inside gap-2">
               <li>NUI (Natural User Interface)</li>
               <li>VUI (Voice User Interface)</li>
-              <li>BUI (Brain-Computer Interface)</li>
+              <li>BUI (Brain User Interface)</li>
               <li>Entre outros...</li>
             </ul>
           </div>
