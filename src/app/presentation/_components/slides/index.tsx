@@ -13,8 +13,6 @@ import { TiposDeTestesDeUI } from "./tipos-de-testes-de-ui";
 import { Desafios } from "./desafios";
 import { Estrategias } from "./estrategias";
 import { BoasPraticas } from "./boas-praticas";
-import { Frameworks } from "./frameworks";
-import { ExemploPratico } from "./exemplo-pratico";
 import { TendenciasFuturas } from "./tendencias-futuras";
 import { Conclusao } from "./conclusao";
 import { Artigo } from "./artigo";
